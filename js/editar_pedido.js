@@ -14,7 +14,7 @@ function modificar() {
 
     console.log(datos);
 
-    let url = "http://localhost:5000/update/"+id
+    let url = "https://powerfulfitness.pythonanywhere.com/update/"+id
     var options = {
         body: JSON.stringify(datos),
         method: 'PUT',
