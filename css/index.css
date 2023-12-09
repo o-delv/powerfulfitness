@@ -48,8 +48,8 @@ section h1 {
     margin-top: 1%;
     align-self: center;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .carousel__item {
@@ -60,8 +60,8 @@ section h1 {
     font-weight: bold;
     font-size: 2em;
     color: #ffffff;
-    opacity: 0;
-    transition: opacity 0.5s;
+    /*opacity: 0;
+    transition: opacity 0.5s;*/
     
 }
 
