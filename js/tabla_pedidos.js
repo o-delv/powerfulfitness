@@ -3,7 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        url:"http://127.0.0.1:5000/pedidos",
+        url:"https://powerfulfitness.pythonanywhere.com/pedidos",
         pedidos:[],
         error:false,
         cargando:true
@@ -31,7 +31,7 @@ const { createApp } = Vue
         // el id se necesita para buscar en la DB y eliminarlo
         eliminar(id) {
             
-            const url = 'http://localhost:5000/borrar/'+id;
+            const url = 'https://powerfulfitness.pythonanywhere.com/borrar/'+id;
             var options = {
                 method: 'DELETE',
                 
