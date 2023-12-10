@@ -40,7 +40,7 @@ form {
 input {
     padding-top: 2%;
     padding-bottom: 2%;
-    width: 200%;
+    max-width: auto;
 }
 
 button {
