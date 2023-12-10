@@ -38,9 +38,8 @@ form {
   }
 
 input {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    max-width: auto;
+    padding-top: 2% 0 2% 0;
+    width: 26vw;
 }
 
 button {
