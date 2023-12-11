@@ -1,33 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-* {
-    margin: 0%;
-    padding: 0%;
-}
-
-main {
-    display: block;
-    padding: 0vh;
-    background: linear-gradient(to bottom, rgb(229, 177, 177), rgba(58, 1, 52, 0.999));
-}
-
-
-.principal {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.principal img {
-    min-width: 100%;
-    height: auto;
-    margin-top: 20vh;
-
-}
-
 section {
     width: 100%;
     z-index: 1;
@@ -115,4 +88,27 @@ display: none;
     border-width: 1px;
     font-family: 'Bebas Neue', sans-serif;
     text-align: center;
+}
+
+
+@media screen and(max-width:786px){
+    .header .enlace{
+        display: grid;
+        grid-template-areas: "log ."
+                             "lace1 lace2"
+                             "lace3 lace4";
+    }
+}
+
+.enlace .lace1{
+    grid-area: lace1;
+}
+.enlace .lace2{
+    grid-area: lace2;
+}
+.enlace .lace3{
+    grid-area: lace3;
+}
+.enlace .lace4{
+    grid-area: lace4;
 }
