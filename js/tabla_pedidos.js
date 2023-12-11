@@ -3,20 +3,19 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        url:"http://127.0.0.1:5000/pedidos",
+        url:"https://powerfulfitness.pythonanywhere.com/pedidos",
         pedidos:[],
         error:false,
         cargando:true
       }
     },
-    // Se llama después de que la instancia haya 
-    // terminado de procesar todas las opciones relacionadas con el estado.
+
     created() {
-        this.fetchData(this.url)  // Invocando al método
+        this.fetchData(this.url) 
     },
     methods: {
         fetchData(url) {
-            // Acá se consume la Api  /pedidos
+          
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
@@ -28,16 +27,16 @@ const { createApp } = Vue
                     this.error=true              
                 });
         },
-        // el id se necesita para buscar en la DB y eliminarlo
+
         eliminar(id) {
             
-            const url = 'http://localhost:5000/borrar/'+id;
+            const url = 'https://powerfulfitness.pythonanywhere.com/borrar/'+id;
             var options = {
                 method: 'DELETE',
                 
             }
             fetch(url, options)
-                .then(res => res.text()) // or res.json()
+                .then(res => res.text()) 
                 .then(res => {
                     alert("Eliminado correctamente")
                     location.reload();

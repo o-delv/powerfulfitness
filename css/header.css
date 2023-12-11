@@ -1,0 +1,33 @@
+.contenedor .header {
+    background: linear-gradient(to bottom, rgb(229, 177, 177), rgba(58, 1, 52, 0.999));
+    color: #fff;
+    display: grid;
+    grid-area: header;
+    border-radius: 10px;
+
+    grid-template-areas: "log . enlace enlace enlace";
+}
+
+.header .logo {
+    width: 200px;
+    border-radius: 50% 50% 50% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: log;
+}
+
+.enlaces a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.header .enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 15px;
+    grid-area: enlace;
+    grid-gap: 15px;
+}

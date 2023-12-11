@@ -4,87 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cabecera.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!-- <link rel="stylesheet" href="../css/ingresar_pedidos.css"> -->
     <link rel="stylesheet" href="../css/tabla_pedidos.css">
-    <link rel="stylesheet" href="../css/piedepagina.css">
     <title>Pedidos</title>
 </head>
 
 <body>
+    <div class="contenedor">
+        <header class="header">
+            <img class="logo" src="../img/LOGOpng.png" alt="">
 
-    <header id="header"></header>
+            <nav class="enlaces">
+                <a class="lace1" href="../index.html">Inicio</a>
+                <a class="lace2" href="productos.html">Productos</a>
+                <a class="lace3" href="videos.html">Videos</a>
+                <a class="lace4" href="contacto.html">Contactenos</a>
+                <a class="lace5" href="ingresar_pedido.html">Pedidos</a>
+            </nav>
+        </header>
 
-    <main>
-        <section class="menu">
-            <a href="ingresar_pedido.html">Registrar pedido</a>
-        </section>
-        <section class="container">
-            <div id="app">
+        <header id="header"></header>
 
-                <!-- Botón Nuevo -->
-                <a class="nuevo" href="ingresar_pedido.html">Nuevo</a>
+        <main class="cuerpo">
+            <section class="menu">
+                <a href="ingresar_pedido.html">Registrar pedido</a>
+            </section>
+            <section class="container">
+                <div id="app">
 
-                <section v-if="error">Lo sentimos se ha producido un error.</section>
-                <section v-else>
-                    <section v-if="cargando">
-                        <p>Cargando .....</p>
+                    <!-- Botón Nuevo -->
+                    <a class="nuevo" href="ingresar_pedido.html">Nuevo</a>
 
-                    </section>
-
+                    <section v-if="error">Lo sentimos se ha producido un error.</section>
                     <section v-else>
+                     <section v-if="cargando">
+                            <p>Cargando .....</p>
 
-                        <div>
-                            <table class="tabla">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                        <th>Cantidad</th>
-                                        <th>Dirección</th>
-                                        <th>Editar</th>
-                                        <th>Eliminar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                        </section>
 
-                                    <tr v-for="pedido in pedidos">
-                                        <td>{{pedido.id}}</td>
-                                        <td>{{pedido.nombre}}</td>
-                                        <td>{{pedido.precio}}</td>
-                                        <td>{{pedido.cantidad}}</td>
-                                        <td>{{pedido.direccion}}</td>
-                                        <td>
-                                            <button type="button" v-on:click="eliminar(pedido.id)">Eliminar</button>
-                                        </td>
-                                        <td>
-                                            <a class="boton"
-                                                :href="'editar_pedido.html?id='+ pedido.id+'&nombre=' +pedido.nombre+ '&precio='+pedido.precio+'&cantidad='+pedido.cantidad +  '&direccion='+pedido.direccion">Editar</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <section v-else>
+
+                            <div>
+                                <table class="tabla">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th>Dirección</th>
+                                            <th>Editar</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr v-for="pedido in pedidos">
+                                            <td>{{pedido.id}}</td>
+                                            <td>{{pedido.nombre}}</td>
+                                            <td>{{pedido.precio}}</td>
+                                            <td>{{pedido.cantidad}}</td>
+                                            <td>{{pedido.direccion}}</td>
+                                            <td>
+                                                <button type="button" v-on:click="eliminar(pedido.id)">Eliminar</button>
+                                            </td>
+                                            <td>
+                                                <a class="boton"
+                                                    :href="'editar_pedido.html?id='+ pedido.id+'&nombre=' +pedido.nombre+ '&precio='+pedido.precio+'&cantidad='+pedido.cantidad +  '&direccion='+pedido.direccion">Editar</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
                     </section>
-                </section>
 
-            </div>
-        </section>
+                </div>
+            </section>
 
-    </main>
+        </main>
 
-    <footer>
-        <a href="https://www.instagram.com/fitnesspowerfullpfgalvan/" target="_blank" rel="noopener"
-            title="instagram"><img class="iconred" src="../img/instagram.png" alt=""></a>
-        <a href="https://www.facebook.com/diego.accesori" target="_blank" rel="noopener" title="facebook"><img
-                class="iconred" src="../img/facebook.png" alt=""></a>
-        <a href="https://web.whatsapp.com/" target="_blank" rel="noopener" title="whatsapp"><img id="iconred"
-                src="../img/whatsapp.png" alt=""></a>
-    </footer>
+        <footer class="footer">
+            <a class="foot1" href="https://www.instagram.com/fitnesspowerfullpfgalvan/" target="_blank" rel="noopener"
+                title="instagram"><img class="iconred" src="../img/instagram.png" alt=""></a>
+            <a class="foot2" href="https://www.facebook.com/diego.accesori" target="_blank" rel="noopener"
+                title="facebook"><img class="iconred" src="../img/facebook.png" alt=""></a>
+            <a class="foot3" href="https://web.whatsapp.com/" target="_blank" rel="noopener" title="whatsapp"><img
+                    id="iconred" src="../img/whatsapp.png" alt=""></a>
+        </footer>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="../js/tabla_pedidos.js"></script>
-    <script src="../js/header.js"></script>
+    </div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="../js/tabla_pedidos.js"></script>
 </body>
 
 </html>

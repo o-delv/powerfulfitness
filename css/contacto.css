@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.contenido1{
+    width: 100%;
+    max-width: 1000px;
+}
+
+.formulario .contenedor{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: "formulario";
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.999);
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    border-radius: 20px;
+}
+
+
+form h4 {
+    font-size: 60px;
+    margin-bottom: 10 px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.comentario {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #000000;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    border: 1px solid #950563;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.control1, .control2, .control3 {
+    width: 98%;
+    margin: 5px 0;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #950563;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+form p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    padding: 1%;
+}
+
+form a {
+    color: white;
+    text-decoration: none;
+}
+
+.form a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.boton1 {
+    width: 100%;
+    background: #950563;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+
+}
