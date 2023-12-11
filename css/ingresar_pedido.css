@@ -78,7 +78,7 @@ button:hover {
     form {
         background-color: black;
         width: 50vw;
-        height: 50vh;
+        height: 65vh;
         border-radius: 3vw;
         display: flex;
         flex-direction: column;
@@ -121,7 +121,7 @@ button:hover {
     form{
         background-color: #000204;
         width: 80vw;
-        height: 40vh;
+        height: 65vh;
         border-radius: 3vw;
         display: flex;
         flex-direction: column;
@@ -160,12 +160,14 @@ button:hover {
 
 }
 
+
+
 @media screen and (max-width: 320px) {
    
     form{
         background-color: #000000;
         width: 80vw;
-        height: 50vh;
+        height: 60vh;
         border-radius: 3vw;
         display: flex;
         flex-direction: column;
@@ -188,3 +190,4 @@ button:hover {
     }
 
 }
+
