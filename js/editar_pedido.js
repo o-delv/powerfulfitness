@@ -20,6 +20,8 @@ function modificar() {
         method: 'PUT',
         
         headers: { 'Content-Type': 'application/json' },
+        // el navegador seguirá automáticamente las redirecciones y
+        // devolverá el recurso final al que se ha redirigido.
         redirect: 'follow'
     }
     fetch(url, options)
@@ -27,6 +29,7 @@ function modificar() {
             console.log("modificado")
             alert("Registro modificado")
 
+            //Puedes utilizar window.location.href para obtener la URL actual, redirigir a otras páginas
            window.location.href = "tabla_pedidos.html";
           
         })

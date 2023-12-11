@@ -9,12 +9,14 @@ const { createApp } = Vue
         cargando:true
       }
     },
-
+    // Se llama después de que la instancia haya 
+    // terminado de procesar todas las opciones relacionadas con el estado.
     created() {
-        this.fetchData(this.url)
+        this.fetchData(this.url)  // Invocando al método
     },
     methods: {
         fetchData(url) {
+            // Acá se consume la Api  /pedidos
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
@@ -26,6 +28,7 @@ const { createApp } = Vue
                     this.error=true              
                 });
         },
+        // el id se necesita para buscar en la DB y eliminarlo
         eliminar(id) {
             
             const url = 'http://localhost:5000/borrar/'+id;
@@ -34,7 +37,7 @@ const { createApp } = Vue
                 
             }
             fetch(url, options)
-                .then(res => res.text())
+                .then(res => res.text()) // or res.json()
                 .then(res => {
                     alert("Eliminado correctamente")
                     location.reload();
